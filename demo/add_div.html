@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var counter = 1;
+        var limit = 3;
+        function addInput(divName) {
+            if (counter == limit) {
+                alert("You have reached the limit of adding " + counter + " inputs");
+            }
+            else {
+                var newdiv = document.createElement('div');
+                newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+                document.getElementById(divName).appendChild(newdiv);
+                counter++;
+            }
+        }
+
+        function remove() {
+            // way 1
+            var elem = document.querySelector('#some-element');
+            elem.parentNode.removeChild(elem);
+            // way 2
+            var elem = document.querySelector('#some-element');
+            elem.style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <form method="POST">
+        <div id="dynamicInput">
+            Entry 1<br><input type="text" name="myInputs[]">
+        </div>
+        <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+    </form>
+</body>
+
+</html>

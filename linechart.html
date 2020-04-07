@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Line Chart in HTML5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="line.js"></script>
+</head>
+
+<body>
+    <div id="linner">
+        <div id="line_1">
+            <p>Line 1</p> 
+            <input id="color_picker_1" type="color"/>
+            <button class="add" onclick="add(1)">Add</button>
+            <button class="remove" onclick="remove(1)">remove</button>
+            <br>
+            <div id="new_chq_1"></div>
+            <input type="hidden" value="1" id="total_chq_1">
+            <button onclick="onDraw(1)">Get me</button>
+            <button onclick="onClear(1)">Clear</button>
+        </div>
+        <button onclick="addDiv()">add div</button>
+        <button onclick="removeDiv()">remove div</button>
+        <input type="hidden" value="1" id="total_line">
+        <canvas id="myCanvas" width="600" height="300" st
+        yle="border: 1px solid black;"></canvas>
+    </div>
+</body>
+
+</html>
